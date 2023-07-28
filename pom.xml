@@ -43,11 +43,14 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+=======
+>>>>>>> 697d9049fc7acfec1e7a07311e9a980863e32db7
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -59,6 +62,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<<<<<<< HEAD
 				<configuration>
 					<excludes>
 						<exclude>
@@ -67,6 +71,8 @@
 						</exclude>
 					</excludes>
 				</configuration>
+=======
+>>>>>>> 697d9049fc7acfec1e7a07311e9a980863e32db7
 			</plugin>
 		</plugins>
 	</build>
