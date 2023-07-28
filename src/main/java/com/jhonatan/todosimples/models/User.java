@@ -1,6 +1,8 @@
 package com.jhonatan.todosimples.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -12,6 +14,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -55,6 +58,10 @@ public class User implements Serializable {
 	@Column(name = "USER_PASSWORD", length = 60, nullable = false)
 	private String password;
 
-	// private List<Task> tasks = new ArrayList<>();
+	/**
+	 * MAPEADO PELO NOME DA VARIAVEL DO OUTRO LADO
+	 */
+	@OneToMany(mappedBy = "user")
+	private List<Task> tasks = new ArrayList<>();
 
 }
